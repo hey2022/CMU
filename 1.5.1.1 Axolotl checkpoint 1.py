@@ -1,0 +1,23 @@
+from cmu_graphics import *
+
+
+def main():
+    app.background = 'beige'
+
+    # Draw the plants and rocks.
+    ### Place Your Code Here ###
+    Star(80, 360, 70, 20, fill="seaGreen", roundness=40)
+    Star(360, 370, 120, 25, fill="mediumSeaGreen", roundness=35)
+    Star(125, 365, 35, 15, fill="mediumSeaGreen", roundness=90)
+    Star(185, 350, 10, 5, fill="grey", roundness=80)
+    Circle(310, 348, 15, fill="dimGrey")
+
+    # Draw the dirt.
+    ### Place Your Code Here ###
+    Rect(0, 350, 400, 50, fill="saddleBrown")
+
+    cmu_graphics.run()
+
+
+if __name__ == '__main__':
+    main()
