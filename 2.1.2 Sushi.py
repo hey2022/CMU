@@ -6,7 +6,7 @@ def onMousePress(x, y):
     # (HINT Each sushi is drawn with only 5 shapes.)
 
     # Draw the sushi body with an Oval, a Rect, and another Oval.
-    # (HINT: The first Oval is drawn at mouseX, mouseY, the Rect is 20 pixels
+    # (HINT: The first Oval is drawn at x, y, the Rect is 20 pixels
     #          to the left of that, and the second Oval is drawn 20 pixels
     #          below the first Oval.
     # Place Your Code Here #
@@ -19,7 +19,7 @@ def onMousePress(x, y):
     Oval(x, y, 38, 18, fill="white")
 
     # Draw the salmon using a Rect.
-    # (HINT: The Rect is drawn at mouseX - 5, mouseY - 5.)
+    # (HINT: The Rect is drawn at x - 5, y - 5.)
     # Place Your Code Here #
     Rect(x - 5, y - 5, 10, 10, fill=gradient("salmon", "crimson", start="top"))
 

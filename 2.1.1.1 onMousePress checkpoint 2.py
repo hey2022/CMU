@@ -1,11 +1,11 @@
 from cmu_graphics import *
 
 
-def onMousePress(mouseX, mouseY):
+def onMousePress(x, y):
     # Change your code so that the circles are drawn where you press your mouse!
     # (HINT: Be sure to read the comment at the top of the editor!)
     # Fix Your Code Here #
-    Circle(mouseX, mouseY, 15, fill='steelBlue')
+    Circle(x, y, 15, fill='steelBlue')
 
 
 def main():

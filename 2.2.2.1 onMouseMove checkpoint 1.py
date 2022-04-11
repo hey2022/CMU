@@ -2,7 +2,7 @@ from cmu_graphics import *
 
 
 def onMouseMove(x, y):
-    # Rotate the star using either the mouseX or the mouseY. We have named the
+    # Rotate the star using either the x or the y. We have named the
     # star "spinningStar" for you.
     # (HINT: Remember that all shapes have a rotateAngle property!)
     # Place Your Code Here #

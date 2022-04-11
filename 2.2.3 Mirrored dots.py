@@ -8,7 +8,7 @@ def onMouseMove(x, y):
     dot1.centerY = y
 
     # Move dot2 to be a mirrored version of dot1.
-    # (HINT: The distance from dot2 to the right edge of the canvas is mouseX!)
+    # (HINT: The distance from dot2 to the right edge of the canvas is x!)
     # Place Your Code Here #
     dot2.centerX = 400 - x
     dot2.centerY = y

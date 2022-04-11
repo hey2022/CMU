@@ -2,7 +2,7 @@ from cmu_graphics import *
 
 
 def onMousePress(x, y):
-    # Draw a star using the mouseX as the rotateAngle.
+    # Draw a star using the x as the rotateAngle.
     # Place Your Code Here #
     Star(200, 200, 200, 5, fill="white", opacity=20, rotateAngle=x)
     pass
