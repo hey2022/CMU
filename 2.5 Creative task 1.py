@@ -4,9 +4,10 @@ import random
 
 def game_over():
     app.background = "black"
-    score.fill = "white"
     food.fill = "black"
     Label("Game over", 200, 200, fill="white")
+    Label("Score: ", 200, 225, fill="white")
+    Label(score.value, 225, 225, fill="white")
     app.stop()
 
 
