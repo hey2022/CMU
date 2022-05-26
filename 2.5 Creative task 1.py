@@ -46,19 +46,19 @@ def onKeyPress(key):
     # change direction
     if not snake.direction_flag:
         if key == "right" or key == "d":
-            if snake.direction != "left":
+            if snake.direction != "left" and snake.direction != "right":
                 snake.direction = "right"
                 snake.direction_flag = True
         if key == "left" or key == "a":
-            if snake.direction != "right":
+            if snake.direction != "right" and snake.direction != "left":
                 snake.direction = "left"
                 snake.direction_flag = True
         if key == "down" or key == "s":
-            if snake.direction != "up":
+            if snake.direction != "up" and snake.direction != "down":
                 snake.direction = "down"
                 snake.direction_flag = True
         if key == "up" or key == "w":
-            if snake.direction != "down":
+            if snake.direction != "down" and snake.direction != "up":
                 snake.direction = "up"
                 snake.direction_flag = True
 
