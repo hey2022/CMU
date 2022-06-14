@@ -1,6 +1,6 @@
 from cmu_graphics import *
 import random
-
+AI = 1
 
 def game_over():
     app.background = "black"
@@ -68,7 +68,6 @@ def move_snake():
         snake.body[i].centerX, snake.body[i].centerY = snake.body[i - 1].centerX, snake.body[i - 1].centerY
     snake.body[0].centerX, snake.body[0].centerY = snake.centerX, snake.centerY
 
-
 def onStep():
     move_head()
     check_collision()
@@ -81,7 +80,7 @@ def onStep():
 
 if __name__ == '__main__':
     # speed of game
-    app.stepsPerSecond = 20
+    app.stepsPerSecond = 10
 
     # snake size
     block = 10
