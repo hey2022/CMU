@@ -1,6 +1,12 @@
 from cmu_graphics import *
 import random
-AI = 1
+
+AI_mode = False
+
+
+def path_finder():
+    pass
+
 
 def game_over():
     app.background = "black"
@@ -68,7 +74,45 @@ def move_snake():
         snake.body[i].centerX, snake.body[i].centerY = snake.body[i - 1].centerX, snake.body[i - 1].centerY
     snake.body[0].centerX, snake.body[0].centerY = snake.centerX, snake.centerY
 
+
+def get_x_direction(x_dif):
+    direction = ""
+    if x_dif == 0:
+        return direction
+    if x_dif > 0 and snake.direction != "left":
+        direction = "right"
+    elif snake.direction != "right":
+        direction = "left"
+    return direction
+
+
+def get_y_direction(y_dif):
+    direction = ""
+    if y_dif == 0:
+        return direction
+    if y_dif > 0 and snake.direction != "up":
+        direction = "down"
+    elif snake.direction != "down":
+        direction = "up"
+    return direction
+
+
+def AI():
+    x_dif = food.centerX - snake.centerX
+    y_dif = food.centerY - snake.centerY
+    x_direction = get_x_direction(x_dif)
+    y_direction = get_y_direction(y_dif)
+    if not snake.direction_flag:
+        if x_direction != "":
+            snake.direction = x_direction
+        else:
+            snake.direction = y_direction
+        snake.direction_flag = True
+
+
 def onStep():
+    if AI_mode:
+        AI()
     move_head()
     check_collision()
     # check if collide with food
@@ -80,7 +124,7 @@ def onStep():
 
 if __name__ == '__main__':
     # speed of game
-    app.stepsPerSecond = 10
+    app.stepsPerSecond = 20
 
     # snake size
     block = 10
